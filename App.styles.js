@@ -23,6 +23,7 @@ export const CommonText = styled.Text`
   color: #f9faf7;
   font-size: 10;
 `;
+CommonText.displayName = 'CommonText';
 
 export const EntryButton = styled.TouchableOpacity`
   background-color: #e81e0c;
@@ -33,8 +34,10 @@ export const EntryButton = styled.TouchableOpacity`
   align-items: center;
   justify-content: center;
 `;
+EntryButton.displayName  = 'EntryButton';
 
 export const CatImage = styled.Image`
 width: 50%;
 height: 50%;
 `;
+CatImage.displayName = 'CatImage';

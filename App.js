@@ -26,22 +26,18 @@ export default function App() {
       .getAll()
       .then((res) => setSentence(res.data.url))
       .catch((err) => console.log(err));
-    console.log(sentence);
     pressCount++;
     setPressed(pressCount);
-    console.log(pressCount);
   };
 
   return (
     <View style={styles.container}>
       <WelcomeBG source={bgImage}>
-        <AppMainText>
-          ¿Te gustaría mandar a alguien a la mierda y no sabes cómo?
-        </AppMainText>
+        <AppMainText>¿Tienes estrés y no sabes cómo pararlo?</AppMainText>
         <EntryButton onPress={handlePress}>
           <CommonText>Toca para descubrirlo</CommonText>
         </EntryButton>
-        {pressed !== 0 && <CatImage source={{ uri: sentence }} />}
+        {pressed ? <CatImage source={{ uri: sentence }} /> : null}
       </WelcomeBG>
       <StatusBar style="auto" />
     </View>
